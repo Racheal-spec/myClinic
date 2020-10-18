@@ -22,7 +22,7 @@ h2, h3, h4, h5 {
 header{
     background-color: var(--lightblue);
     color: var(--greytextcolor);
-    height: 100vh;
+    min-height: 100vh;
 }
 .logo h1{
     font-family: 'Piedra', cursive;
@@ -32,13 +32,12 @@ display: flex;
 align-items: center;
 justify-content: start;
 height: 20vh;
-margin-left: 10%;
 }
 .nav-links {
 display: flex;
-margin-left: 20%;
 width: 100%;
 list-style: none;
+/*margin-left: 20%;*/
 }
 .nav-links > li {
     margin: 0 20px;
@@ -256,7 +255,7 @@ footer h2{
         text-decoration: none;
         line-height: 1.5;
         color: var(--deepblue);
-        font-weight: bold;
+        font-weight: 500;
         transition: all .5s ease-in-out;
         -webkit-transition: all .5s ease-in-out;
         -moz-transition: all .5s ease-in-out;
@@ -278,6 +277,7 @@ footer h2{
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 5px;
+    text-align: center;
 }
 .sm{
     text-align: center;
@@ -288,45 +288,86 @@ footer h2{
     cursor: pointer;
     font-size: 1.5rem;
  }
-@media screen and (max-width: 767px){
+
+ /*responsiveness*/ 
+
+@media screen and (max-width: 768px){
     .nav{
-        z-index: 9;
-        height: 10vh;
+       height: 15vh;
     }
    .nav-links{
-    list-style: none;
-    display: flex; 
+    position: absolute;
+    top: 10vh;
+    right: 0;
+    height: 100vh;
+    background-color: white;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around; 
-    position: absolute;
-    background-color: var(--yellow);
+    justify-content: space-evenly;
+    z-index: 9;
+    width: 100%;
+    cursor: pointer;
     clip-path: circle(0px at 90% -10%);
     -webkit-clip-path: circle(0px at 90% -10%);
-    transition: all 2s ease;
+    transition: transform 0.5s ease-in;
 }
 .nav-links li a{
     color: var(--lightblue);
     font-weight: bold;
     transition: all 0.5s ease-in;
 } 
-.line{
-    width: 26px;
+.nav-open{
+    clip-path: circle(1000px at 90% -10%);
+}
+.nav-close{
+   display: none;
+}
+.burger{
+  display: block;  
+  }
+  @keyframes nav-linksFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.toggle .line1{
+   transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+} 
+.line1, .line2, .line3 {
     height: 3px;
     background-color: aliceblue;
     margin: 5px;
+    transition: all 0.3s ease;
+}
+.line1{
+    width: 30px;
+}
+.line2{
+    width: 26px;
+}
+.line3{
+    width: 20px;
 }
 .burger{
     position: absolute;
     right: 10%;
-    top: 5%;
+    top: 7%;
     transform: translate(-5%, -50%);
 }
-.navlink.open{
-    clip-path: circle(1000px at 90% -10%);
-}
-.navlink.close{
-    display: none;
+form{
+    text-align: center;
 }
 .hero-section img {
     max-width: 100%;
@@ -339,9 +380,6 @@ footer h2{
     height: 70vh;
     margin-bottom: 100px;
     object-fit: cover;
-}
-header{
-    height: 95vh;
 }
 .first-section{
     padding: 40px !important;
@@ -374,12 +412,9 @@ header{
     text-align: center;
     width: 85%;
 }
-.cta-overlay h2, .cta-overlay p{
+.cta-overlay h2, .cta-overlay p, .footer-logo h1, footer h2{
     text-align: center;
 } 
-.footer-logo h1, footer h2{
-   text-align: center;
-}
 .quicklinks > ul {
     text-align: center;
     padding: 0 !important;
