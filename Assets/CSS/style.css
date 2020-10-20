@@ -12,9 +12,13 @@
     --backgroundshade2: #ECF1FB;
     --greytextcolor: rgba(255, 255, 255, 0.836);
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body {
     font-family: 'Mulish', sans-serif;  
+    min-height: 100vh;
+    background: white; 
 }
 h2, h3, h4, h5 {
     color: var(--deepblue);
@@ -22,7 +26,7 @@ h2, h3, h4, h5 {
 header{
     background-color: var(--lightblue);
     color: var(--greytextcolor);
-    min-height: 100vh;
+    height: 98vh;
 }
 .logo h1{
     font-family: 'Piedra', cursive;
@@ -30,14 +34,13 @@ header{
 .nav {
 display: flex;
 align-items: center;
-justify-content: start;
-height: 20vh;
+justify-content: space-between;
+height: 15vh;
 }
 .nav-links {
 display: flex;
 width: 100%;
 list-style: none;
-margin-left: 20%;
 }
 .nav-links > li {
     margin: 0 20px;
@@ -54,17 +57,20 @@ margin-left: 20%;
 .hero-section {
     padding: 50px 0;
 }
+.hero-section > .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .hero-section h2{
     color: var(--white);
 }
 .hero-section p{
-    padding: 15px 0;
+    margin: 30px 0;
 }
 .hero-section img {
     max-width: 100%;
     object-fit: cover;
-    position: relative;
-    box-shadow: 40px 20px 40px 20px rgba(0, 0, 0, 0.137);
 }
 .header-input{
     position: relative;
@@ -96,33 +102,16 @@ margin-left: 20%;
  margin: 10px 0;
  background-color: var(--yellow);
 }
-.reasons p{
-    width: 70%;
+.first-section h4{
+    margin: 20px 0;
 }
 #icon{
-    background-color: var(--lightblue);
-    color: white;
+    background-color: var(--deepblue);
+    color: var(--backgroundshade2);
     width: 40px;
     height: 35px;
     padding: 7px 0;
     border-radius: 50%;
-}
-
-/*services section*/
-
-.services{
-    padding: 80px 0;
-    background-color: var(--backgroundshade2);
-}
-.title{
-    margin: 50px 0;
-}
-#service-icon{
-    color: var(--yellow);
-    font-size: 1.5rem;
-}
-.services h4{
-    margin: 20px 0;
 }
 
 /*about section*/
@@ -130,9 +119,9 @@ margin-left: 20%;
     padding: 80px 0;
 }
 .about img{
-    max-width: 100%;
-    height: 100vh;
-    box-shadow: 20px 30px 20px 30px rgba(0, 0, 0, 0.144);
+    width:85%;
+    height: auto;
+    box-shadow: 10px 20px 20px 10px rgba(0, 0, 0, 0.144);
 }
 .about > .container > .row {
     align-items: center;
@@ -164,6 +153,24 @@ margin-left: 20%;
     background-color: #85601B;
 }
 
+/*services section*/
+
+.services{
+    padding: 80px 0;
+    background-color: var(--backgroundshade2);
+}
+.title{
+    margin: 50px 0;
+}
+#service-icon{
+    color: var(--yellow);
+    font-size: 1.5rem;
+}
+.services h4{
+    margin: 20px 0;
+}
+
+
 /*app section*/
 
 .app-section{
@@ -184,7 +191,7 @@ width: 60%;
 }
 .app-section img{
     margin-left: 20%;
-    height: 90vh;
+    height: 80vh;
     align-items: center;
 }
 .btn-caption{
@@ -209,44 +216,58 @@ width: 60%;
 
 /*CTA section*/
 .cta-section{
-    padding: 40px 20px;
+    padding: 40px 0;
 }
-.cta{
+.cta-section > .cta > .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cta-img{
     background-image: linear-gradient(to right, transparent, #4176d8d8), url('../Images/pexels-andrea-piacquadio-3881469.jpg');
     background-repeat: no-repeat;
     background-position: center;
+    background-attachment: fixed;
     background-size: cover;
-    max-width: 100%;
-    border-radius: 12px;
+    width: 100%;
     height: 90vh;
-    padding: 0px auto;
-    position: relative;
-}
-.cta-overlay{
-    position: absolute;
-    right: 10%;
-    bottom: 30%;
-    width: 50%;
-    text-align: right;
 }
 .cta-overlay h2, .cta-overlay p{
-    color: white;
-    text-align: right;
+    color: #1a1a1a;
 }
 
+/*team section*/
+.team-section{
+    padding: 80px;
+}
+.team-section img{
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+.team-section h5, .team-section p{
+    font-size: 14px;
+    margin: 10px 0;
+}
 /*footer section*/
 
 footer{
-    background-color: var(--backgroundshade2);
+    /*
+    position: fixed;
+    bottom: 0;
+    z-index: -1;
+    */
+    height: 80vh;
+    background-color: var(--backgroundshade1);
     padding: 30px;
 }
 .footer-logo h1{
     font-family: 'Piedra', cursive;
-    color: #204C9F;
+    color: var(--lastshade);
 }
-footer h2{
-    font-size: 1.5rem;
-    margin: 20px 0;
+footer h6{
+    margin: 10px 0;
+    font-weight: bold;
 }
 .quicklinks > ul{
     list-style: none;
@@ -254,8 +275,7 @@ footer h2{
 .quicklinks > ul > li > a{
         text-decoration: none;
         line-height: 1.5;
-        color: var(--deepblue);
-        font-weight: 500;
+        color: #494949;
         transition: all .5s ease-in-out;
         -webkit-transition: all .5s ease-in-out;
         -moz-transition: all .5s ease-in-out;
@@ -264,27 +284,12 @@ footer h2{
 .quicklinks > ul > li > a:hover{
         color: var(--btnhover);
 }
-.gallery img{
-    max-width: 100%;
-    height: 100px;
-    object-fit: cover;
-}
-.gallery h2{
-    text-align: center;
-}
-.pictures{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 5px;
-    text-align: center;
-}
 .sm{
     text-align: center;
 }
 .sm .fa-facebook, .sm .fa-instagram, .sm .fa-twitter, .sm .fa-telegram{
-    color: var(--deepblue);
-    margin: 10px 20px;
+    color: var(--lastshade);
+    margin: 10px 15px;
     cursor: pointer;
     font-size: 1.5rem;
  }
@@ -292,8 +297,11 @@ footer h2{
  /*responsiveness*/ 
 
 @media screen and (max-width: 768px){
-    .nav{
-       height: 15vh;
+    header{
+        height: auto !important;
+    }
+    .header-btn{
+        right: 12%;
     }
    .nav-links{
     position: absolute;
@@ -337,13 +345,13 @@ footer h2{
     }
 }
 .toggle .line1{
-   transform: rotate(-45deg) translate(-5px,6px);
+   transform: rotate(-45deg) translate(-2px,6px);
 }
 .toggle .line2{
     opacity: 0;
 }
 .toggle .line3{
-    transform: rotate(45deg) translate(-5px,-6px);
+    transform: rotate(45deg) translate(-3px,-12px);
 } 
 .line1, .line2, .line3 {
     height: 3px;
@@ -381,19 +389,12 @@ form{
     margin-bottom: 100px;
     object-fit: cover;
 }
-.first-section{
-    padding: 40px !important;
-   }
-.reasons p, .reasons h5{
-    width: 100%;
-    margin: 15px 0;
-}
 .app{
     display: flex;
     flex-direction: column-reverse;
 }
-.app-section{
-    padding: 20px;
+.app-section, .services, .first-section{
+    padding: 20px 5px !important;
 }
 .app-title{
     width: 100%;
@@ -405,12 +406,9 @@ form{
     align-items: center;
     margin: 20px 0;
 } 
-.cta{
-    height: 65vh;
-}
 .cta-overlay{
     text-align: center;
-    width: 85%;
+    margin: 50px 0;
 }
 .cta-overlay h2, .cta-overlay p, .footer-logo h1, footer h2{
     text-align: center;
@@ -419,4 +417,11 @@ form{
     text-align: center;
     padding: 0 !important;
 }
+.team-section{
+    padding: 20px !important;
+}
+.team-section img{
+    height: 300px;
+}
+footer p, .address h6{text-align: center;}
 }

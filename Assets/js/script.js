@@ -2,6 +2,8 @@ const Burger = document.querySelector('.burger');
 const navigation = document.querySelector('.nav-links');
 const navs = document.querySelectorAll('.nav-links li');
 
+AOS.init();
+
 Burger.addEventListener('click', () => {
     navigation.classList.toggle('nav-open'); 
     
@@ -20,4 +22,4 @@ Burger.addEventListener('click', () => {
     Burger.classList.toggle('toggle');
    
 });
-  
+ 
