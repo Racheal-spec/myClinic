@@ -17,7 +17,7 @@ html{
 }
 body {
     font-family: 'Mulish', sans-serif;  
-    min-height: 100vh;
+    height: 100%;
     background: white; 
 }
 h2, h3, h4, h5 {
@@ -233,6 +233,8 @@ width: 60%;
 /*CTA section*/
 .cta-section{
     padding: 80px 0;
+    height: 100%;
+    overflow: auto;
 }
 .cta-section > .cta > .row{
     display: flex;
@@ -256,6 +258,8 @@ width: 60%;
 footer{
     background-color: var(--backgroundshade1);
     padding: 30px 0;
+    height: 100%;
+    overflow: auto;
 }
 .footer-logo h1{
     font-family: 'Piedra', cursive;
