@@ -39,7 +39,6 @@ height: 15vh;
 }
 .nav-links {
 display: flex;
-width: 100%;
 list-style: none;
 }
 .nav-links > li {
@@ -55,7 +54,7 @@ list-style: none;
     color: var(--yellow);
 }
 .hero-section {
-    padding: 50px 0;
+    padding: 30px 0;
 }
 .hero-section > .row {
     display: flex;
@@ -94,7 +93,7 @@ list-style: none;
 /*first section styles*/
 
 .first-section{
- padding: 80px;
+    padding: 80px 0;
 }
 .underline{
  height: 3px;
@@ -174,7 +173,7 @@ list-style: none;
 /*app section*/
 
 .app-section{
-    padding: 20px;
+    padding: 80px 0;
 }
 
 hr {
@@ -190,7 +189,6 @@ width: 60%;
 }
 .app-section img{
     margin-left: 20%;
-    height: 80vh;
     align-items: center;
 }
 .btn-caption{
@@ -215,26 +213,26 @@ width: 60%;
 
 /*team section*/
 .team-section{
-    padding: 80px;
+    padding: 80px 0;
 }
 .team-section img{
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-}
-.row-2 img {
-    margin-top: 40px;
-}
-.team-section h5{
-    font-size: 1.3rem;
-}
-.team-section p{
-    font-size: 18px;
-}
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  .row-2 img {
+      margin-top: 40px;
+  }
+  .team-section h5{
+      font-size: 1.3rem;
+  }
+  .team-section p{
+      font-size: 18px;
+  }
 
 /*CTA section*/
 .cta-section{
-    padding: 40px 0;
+    padding: 80px 0;
 }
 .cta-section > .cta > .row{
     display: flex;
@@ -256,9 +254,8 @@ width: 60%;
 /*footer section*/
 
 footer{
-    height: 70vh;
     background-color: var(--backgroundshade1);
-    padding: 30px;
+    padding: 30px 0;
 }
 .footer-logo h1{
     font-family: 'Piedra', cursive;
@@ -312,7 +309,7 @@ footer h6{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    z-index: 9;
+    z-index: 1;
     width: 100%;
     cursor: pointer;
     clip-path: circle(0px at 90% -10%);
@@ -384,7 +381,6 @@ form{
     text-align: center;
  }
 .about img {
-    height: 70vh;
     margin-bottom: 100px;
     object-fit: cover;
 }
@@ -400,27 +396,26 @@ form{
     text-align: center;
 } 
 .app-section img{
-    margin-left: 0 !important;
-    height: 50vh;
+    height: 70vh;
     align-items: center;
     margin: 20px 0;
-} 
-.cta-overlay{
-    text-align: center;
-    margin: 50px 0;
-}
-.cta-overlay h2, .cta-overlay p, .footer-logo h1, footer h2{
-    text-align: center;
-} 
-.quicklinks > ul {
-    text-align: center;
-    padding: 0 !important;
 }
 .team-section{
     padding: 10px !important;
+} 
+.cta-overlay{
+    text-align: center;
+}
+.cta-overlay h2, .cta-overlay p, .footer-logo h1, footer h2{
+    text-align: center;
 }
 footer{
     height: auto;
 }
-footer p, .address h6{text-align: center;}
+footer p, .address h6{text-align: center;} 
+.quicklinks > ul {
+    text-align: center;
+    padding: 0 !important;
+}
+
 }
