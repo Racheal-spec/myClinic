@@ -188,6 +188,7 @@ width: 60%;
     color: #D8A341;
 }
 .app-section img{
+    height: 70vh;
     margin-left: 20%;
     align-items: center;
 }
@@ -400,7 +401,7 @@ form{
     text-align: center;
 } 
 .app-section img{
-    height: 70vh;
+    height: 60vh;
     align-items: center;
     margin: 20px 0;
 }
@@ -409,6 +410,7 @@ form{
 } 
 .cta-overlay{
     text-align: center;
+    margin-top: 50px;
 }
 .cta-overlay h2, .cta-overlay p, .footer-logo h1, footer h2{
     text-align: center;
