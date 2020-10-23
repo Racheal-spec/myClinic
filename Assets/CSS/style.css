@@ -28,6 +28,11 @@ header{
     color: var(--greytextcolor);
     height: 98vh;
 }
+header{
+    position: sticky;
+    z-index: 11;
+    
+}
 .logo h1{
     font-family: 'Piedra', cursive;
 }
@@ -406,7 +411,6 @@ form{
 .app-section img{
     height: 40vh;
     align-items: center;
-   
 }
 .team-section{
     padding: 10px !important;

@@ -23,3 +23,7 @@ Burger.addEventListener('click', () => {
    
 });
  
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('body'),
+    smooth: true
+});
