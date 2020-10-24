@@ -439,7 +439,30 @@ footer p, .address h6{text-align: center;}
 
 @media only screen and (max-width: 414px), only screen and (max-width: 411px){
 .burger{
-    top: 6%;
+    top: 7% !important;
 }
 }
 
+
+/* iphone X Portrait and Landscape */
+/*
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    .burger{
+        top: 6.5%;
+    }  
+}
+/* Portrait */
+/*
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+{ 
+    .burger{
+        top: 6% ;
+    }  
+}
+*/
