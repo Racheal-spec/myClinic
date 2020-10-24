@@ -334,7 +334,7 @@ footer h6{
     transition: all 0.5s ease-in;
 } 
 .nav-open{
-    clip-path: circle(1000px at 90% -10%);
+    clip-path: circle(1300px at 90% -10%);
 }
 .nav-close{
    display: none;
@@ -379,7 +379,7 @@ footer h6{
 .burger{
     position: absolute;
     right: 10%;
-    top: 5%;
+    top: 11%;
     transform: translate(-5%, -50%);
 }
 form{
@@ -430,5 +430,29 @@ footer p, .address h6{text-align: center;}
     text-align: center;
     padding: 0 !important;
 }
+}
 
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+    .burger{
+        top: 6% ;
+    }  
+}
+/* iphone X Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    .burger{
+        top: 6.5% !important;
+    }  
+}
+@media only screen and (max-width: 384px) {
+    .burger{
+        top: 5%;
+    }
 }
