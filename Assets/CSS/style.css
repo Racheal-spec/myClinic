@@ -431,13 +431,17 @@ footer p, .address h6{text-align: center;}
     padding: 0 !important;
 }
 }
-
+@media only screen and (max-width: 384px) {
+    .burger{
+        top: 5%;
+    }
+}
 /* Portrait */
 @media only screen 
   and (min-device-width: 375px) 
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) { 
+{ 
     .burger{
         top: 6% ;
     }  
@@ -448,11 +452,14 @@ footer p, .address h6{text-align: center;}
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3) { 
     .burger{
-        top: 6.5% !important;
+        top: 6.5%;
     }  
 }
-@media only screen and (max-width: 384px) {
+@media screen 
+  and (device-width: 414px) 
+ {
     .burger{
-        top: 5%;
-    }
+        top: 6%;
+    }  
 }
+
