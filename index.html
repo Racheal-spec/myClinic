@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--custom css-->
     <link rel="stylesheet" href="./Assets/CSS/style.css">
+    <!--responsive css-->
+    <link rel="stylesheet" href="./Assets/CSS/responsive.css">
     <!--boostrap cdn-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!--font awesome cdn-->
-    <script src="./Assets/libraries/fontawesome-free-5.15.1-web/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" integrity="sha512-F5QTlBqZlvuBEs9LQPqc1iZv2UMxcVXezbHzomzS6Df4MZMClge/8+gXrKw2fl5ysdk4rWjR0vKS7NNkfymaBQ==" crossorigin="anonymous"></script>
   
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>myClinic</title>
@@ -22,10 +24,10 @@
                 </div>
                 <div class="nav-menu">
                    <ul class = "nav-links" id="nav-hide">
-                       <li><a href="#about-section">About</a></li>
-                       <li><a href="#">Services</a></li>
-                       <li><a href="#">How it Works</a></li>
-                       <li><a href="#">Book an Appointment</a></li>
+                       <li class="menu-link"><a href="#about-section">About</a></li>
+                       <li class="menu-link"><a href="#services-section">Services</a></li>
+                       <li class="menu-link"><a href="#app-section">How it Works</a></li>
+                       <li class="menu-link"><a href="#cta-section">Book an Appointment</a></li>
                    </ul>
                </div>
             </div>
@@ -119,7 +121,7 @@
 
 
 <!--services section-->
-<section class="services">
+<section class="services" id="services-section">
     <div class="container services-bg">
         <div class="title">
             <h2>The Best Services at your Fingertip</h2>
@@ -153,7 +155,7 @@
 
 <!--app section-->
 
-<section class="app-section">  
+<section class="app-section" id="app-section">  
     <div class="container">
         <div class="app-title">
             <h2>We can also be your online buddy<br> <span class="chat">chat with us</span></h2>
@@ -269,7 +271,7 @@
     </div>
     </section>
 <!--cta section-->
-<section class="cta-section">
+<section class="cta-section" id="cta-section">
     <div class="container cta">
         <div class="row">
             <div class="col-lg-7 cta-img">
@@ -341,12 +343,7 @@
 </div>
 </footer>
 
-
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script src="Assets/js/script.js"></script>
-    <!--jquery js-->
-    <script src="Assets/js/jquery-3.4.1.min.js"></script>
-    <!--boostrap js-->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
 </body>
 </html>
