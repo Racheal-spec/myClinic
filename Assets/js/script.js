@@ -1,7 +1,7 @@
 const Burger = document.querySelector('.burger');
 const navigation = document.querySelector('.nav-links');
 const navs = document.querySelectorAll('.nav-links li');
-const menuLink = document.querySelector('.menu-link');
+const menuLink = document.querySelectorAll('.menu-link');
 const navbar = document.querySelector('.nav');
 
 AOS.init();
@@ -19,11 +19,15 @@ Burger.addEventListener('click', () => {
         }
     });
    
-});
- 
-menuLink.addEventListener('click', () => {
+}); 
+
+menuLink.forEach((item) => {
+item.addEventListener('click', () => {
     navigation.classList.toggle('nav-open');
     Burger.classList.toggle('toggle');
 })
+})
+
+
 
   
