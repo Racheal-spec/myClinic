@@ -251,7 +251,6 @@ width: 60%;
     background-image: linear-gradient(to right, transparent, #4176d8d8), url('../Images/pexels-andrea-piacquadio-3881469.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
     background-size: cover;
     width: 100%;
     height: 90vh;
